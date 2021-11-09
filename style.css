@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    margin-right: 10%;
+    margin-left: 10%;
+    align-content: space-evenly;
+    gap: 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.Chicken{
+    background-color: grey;
+    grid-row: 1;
+    border: 3px solid black;
+}
+.Beef{
+    background-color: grey;
+    grid-row: 2;
+    border: 3px solid black;
+}
+.Sushi{
+    background-color: grey;
+    grid-row: 3;
+    border: 3px solid black;
+}
+h2{
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    padding: 10;
+    float: right;
+    padding: 0 5%;
+}
+p{
+    padding: 10% 5%;
+}
+.color1{
+    background-color: rgb(170, 107, 78);
+}
+.color2{
+    background-color: rgb(221, 20, 20);
+}
+.color3{
+    background-color: rgb(226, 206, 21);
+}
+
+@media(min-width: 425px) and (max-width: 768px){
+    .container{
+        display: grid;  
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:    "Chicken Beef"
+                                "Sushi Sushi"                    
+}
+.Chicken{
+    grid-area: Chicken;
+}
+.Beef{
+    grid-area: Beef;
+}
+.Sushi{
+    grid-area: Sushi;
+}
+}
+
+@media(min-width: 769px){
+    .container{
+        display: grid;
+        margin-top: 10%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:    "Chicken Beef Sushi"                                      
+}
+.Chicken{
+    grid-area: Chicken;
+}
+.Beef{
+    grid-area: Beef;
+}
+.Sushi{
+    grid-area: Sushi;
+}
+}
